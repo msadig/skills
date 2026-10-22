@@ -1,5 +1,5 @@
 ---
-name: setup
+name: coder-setup
 description: >
   Install, deploy, or bootstrap a new Coder (coder/coder)
   deployment end-to-end. Use for first-time setup on Docker,
@@ -42,7 +42,7 @@ Keep messages short and plain:
 - Explain a Coder concept before naming it when the user is new.
 - Keep flags, env vars, config keys, raw logs, and docs URLs out of
   user-facing questions and handoffs.
-- Do not mention "skill" or "setup skill" to the user.
+- Do not mention "skill" or "coder-setup skill" to the user.
 - Do not hand the user a CLI walkthrough as next steps; offer to do
   follow-up work in plain English.
 

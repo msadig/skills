@@ -1,5 +1,7 @@
 # Coder Skills
 
+> Fork of [coder/skills](https://github.com/coder/skills) with every skill renamed to a `coder-` prefix (`coder-setup`, `coder-workspaces`, `coder-templates`, `coder-modules`) so the names don't clash with other packages. Install: `npx skills add msadig/skills`. To pull upstream changes: `git fetch upstream && git merge upstream/main`, then rename any new skill the same way.
+
 [![skills.sh](https://skills.sh/b/coder/skills)](https://skills.sh/coder/skills)
 
 Skills for Claude Code, Codex, Cursor, and other coding agents to install, configure, and operate Coder.

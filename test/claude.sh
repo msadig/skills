@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# End-to-end test for the setup skill.
+# End-to-end test for the coder-setup skill.
 #
 # Drives `claude -p` with the marketplace in this repo and verifies the
 # resulting Coder deployment via the REST API. Designed to be safe to
@@ -56,7 +56,7 @@ fi
 
 PROMPT_FILE="$WORKDIR/prompt.txt"
 cat >"$PROMPT_FILE" <<EOF
-You are testing the setup skill end-to-end. You MUST use the
+You are testing the coder-setup skill end-to-end. You MUST use the
 setup skill. Follow every phase. Do not deviate.
 
 Constraints:

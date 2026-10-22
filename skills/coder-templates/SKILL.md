@@ -1,14 +1,14 @@
 ---
-name: templates
+name: coder-templates
 description: >
   Create, edit, push, or version a Coder template. Use for requests
   like "scaffold a Docker template", "build a Kubernetes template",
   "add a coder_parameter for the Git repo URL", "push my template to
   this Coder deployment", "update the existing aws-linux template to
   add JetBrains", or "deprecate this template version". Do not use
-  for installing or upgrading Coder itself (use the setup skill),
+  for installing or upgrading Coder itself (use the coder-setup skill),
   adding a single module to a template that already builds (use the
-  modules skill), or authoring custom Terraform providers unrelated
+  coder-modules skill), or authoring custom Terraform providers unrelated
   to Coder.
 ---
 
@@ -101,7 +101,7 @@ Apply the change the user asked for. Common patterns:
   be changeable on rebuild. Use `validation` blocks for regex or
   range enforcement. Use `option` blocks for enums.
 - Add modules from <https://registry.coder.com/modules>. Defer
-  module-specific syntax to the modules skill or to the module
+  module-specific syntax to the coder-modules skill or to the module
   README.
 - Persist data with a dedicated volume resource keyed to the
   workspace owner. Do not rely on container or VM filesystems to

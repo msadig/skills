@@ -1,14 +1,14 @@
 ---
-name: modules
+name: coder-modules
 description: >
   Add a Coder module from registry.coder.com/modules to an existing
   Coder template, or update one that is already there. Use for
   requests like "add the Cursor IDE to my template", "give workspaces
   JetBrains access", "set up code-server", "wire in dotfiles",
   "install Claude Code in this template", or "pin module versions".
-  Do not use for installing or upgrading Coder itself (use the setup
+  Do not use for installing or upgrading Coder itself (use the coder-setup
   skill), authoring a brand-new template from scratch (use the
-  templates skill), or publishing a custom module to the registry.
+  coder-templates skill), or publishing a custom module to the registry.
 ---
 
 # Modules
@@ -67,7 +67,7 @@ disk. Confirm:
 - A `data "coder_workspace" "me"` data source. Most modules gate on
   `data.coder_workspace.me.start_count`.
 
-If no template directory exists, stop and offer the templates skill.
+If no template directory exists, stop and offer the coder-templates skill.
 
 ### 3. Read the module page
 

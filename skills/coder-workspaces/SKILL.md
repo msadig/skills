@@ -1,5 +1,5 @@
 ---
-name: workspaces
+name: coder-workspaces
 description: >
   Use an existing Coder deployment from the command line with the
   `coder` CLI: list, inspect, create, start, stop, and delete
@@ -8,9 +8,9 @@ description: >
   when the user asks to run something "in my workspace", mentions
   their Coder workspaces or deployment, or wants a remote
   environment to work in. Do not use for installing or upgrading
-  Coder itself (use the setup skill), authoring a template from
-  scratch (use the templates skill), or adding registry modules to a
-  template (use the modules skill).
+  Coder itself (use the coder-setup skill), authoring a template from
+  scratch (use the coder-templates skill), or adding registry modules to a
+  template (use the coder-modules skill).
 ---
 
 # Workspaces
@@ -35,7 +35,7 @@ Run `coder whoami`. Three outcomes:
 
 - Succeeds: continue.
 - `coder` is not on `PATH`: install it with
-  `curl -fsSL https://coder.com/install.sh | sh`, or use the setup
+  `curl -fsSL https://coder.com/install.sh | sh`, or use the coder-setup
   skill if the user has no deployment yet.
 - Authentication fails: tell the user to run
   `coder login <deployment-url>` and stop. The flow opens a browser

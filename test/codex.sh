@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# End-to-end test for the setup skill, driven by the Codex CLI.
+# End-to-end test for the coder-setup skill, driven by the Codex CLI.
 #
 # Mirrors test/run.sh but uses `codex exec` instead of `claude -p`. The
 # skill format is identical for both agents (same SKILL.md frontmatter,
@@ -8,7 +8,7 @@
 #
 # Codex picks up skills from $CODEX_HOME/skills, so the harness sets
 # $CODEX_HOME to a sandboxed scratch directory and copies this repo's
-# skills/setup tree under it.
+# skills/coder-setup tree under it.
 
 set -euo pipefail
 
@@ -55,7 +55,7 @@ fi
 # Codex needs auth + a model provider config. Inherit whatever the
 # host has under ~/.codex (config.toml, auth.json, OS keyring is
 # untouched) into the sandbox. The skill itself goes under
-# $CODEX_HOME/skills/setup so Codex auto-discovers it.
+# $CODEX_HOME/skills/coder-setup so Codex auto-discovers it.
 HOST_CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
 if [ -f "$HOST_CODEX_HOME/config.toml" ]; then
   cp "$HOST_CODEX_HOME/config.toml" "$FAKE_CODEX_HOME/config.toml"
@@ -68,12 +68,12 @@ fi
 if [ -d "$HOST_CODEX_HOME/skills/.system" ]; then
   cp -r "$HOST_CODEX_HOME/skills/.system" "$FAKE_CODEX_HOME/skills/.system"
 fi
-cp -r "$MARKETPLACE_DIR/skills/setup" "$FAKE_CODEX_HOME/skills/setup"
+cp -r "$MARKETPLACE_DIR/skills/coder-setup" "$FAKE_CODEX_HOME/skills/coder-setup"
 
 PROMPT_FILE="$WORKDIR/prompt.txt"
 cat >"$PROMPT_FILE" <<EOF
-You are testing the setup skill end-to-end. You MUST use the
-setup skill in \$CODEX_HOME/skills/setup. Follow every phase. Do
+You are testing the coder-setup skill end-to-end. You MUST use the
+coder-setup skill in \$CODEX_HOME/skills/coder-setup. Follow every phase. Do
 not deviate.
 
 Constraints:
